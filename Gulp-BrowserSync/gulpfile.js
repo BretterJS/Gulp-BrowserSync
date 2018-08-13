@@ -56,7 +56,9 @@ gulp.task('html', () => {
 gulp.task('serve', ['sass'], () => {
     
     browserSync.init({
-        server: "./src"
+        server: {
+            baseDir: './'
+        }
     });
 
     gulp.watch("./src/*scss", ['sass']);
